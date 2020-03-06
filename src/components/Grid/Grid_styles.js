@@ -67,6 +67,7 @@ export const stylesRow = css`
     }
 `
 export const stylesCol = css`
+    position:relative;
     padding: ${ (props)=> (padding(props))  };
     width:${props=> props.w || 100}%;
     margin:${ (props)=> (margin(props))  };

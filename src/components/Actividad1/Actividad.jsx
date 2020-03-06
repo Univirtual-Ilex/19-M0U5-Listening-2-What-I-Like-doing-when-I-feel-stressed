@@ -39,7 +39,7 @@ const Actividad_base = ({staticContext, ...props}) => {
     const [modalFlag, setModal] = useState(false)
     const [ok, setOk] = useState(false)
     const [err, setErr] = useState(false)
-
+    console.log(this)
     const remove_item = (id, area) => {
         eval('setVisible' + id)('hide')
         var data = dataItems[id]
@@ -66,6 +66,7 @@ const Actividad_base = ({staticContext, ...props}) => {
         })
     }
 // Refs de las areas
+
     const area_1 = useRef()
     const area_2 = useRef()
     const area_3 = useRef()
@@ -87,51 +88,70 @@ const Actividad_base = ({staticContext, ...props}) => {
                 <ButtonUi icon='ilx-ayuda' tooltip='click on the buttons to listen and read the activities, associate them with the texts below.' />
                 <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
             </UiButtonsContainer>
-            
-            /* ------------------------------------------------------------------------------------------------------------------------
-            |                                                                                                                          |             
-            |                                                                                                                          |
-            |                                                                                                                          |
-            |                                 FALTA LOS BOTONES DE TOOLTIP, EN ESTE MOMENTO AL DAR CLICK EN EL CUADRO SE ABRE          |
-            |                                                                                                                          |     
-            |                                                                                                                          |
-            ----------------------------------------------------------------------------------------------------------------------------*/
+            <ICol mt={3}>
+                <MainTitle color={Ilex.violeta2}>
+                    LISTEN AND PRACTICE FAMILY MEMBERS. THEN, CLASSIFY EACH FAMILY MEMBER BY ITS GENDER.
+                </MainTitle>
+            </ICol>
 
-            <MainTitle color={Ilex.violeta2}>
-            LISTEN AND PRACTICE FAMILY MEMBERS. THEN, CLASSIFY EACH FAMILY MEMBER BY ITS GENDER.
-            </MainTitle>
-            <AreasContainer >
-                <Area  title='Yeison Mosquera ' onClick={() => closeOthers(1)} data-target="area_1" id="area_1" ref={area_1} />
-                <Tooltip visible={tooltip1}  onClick={() => settooltip1(!tooltip1)} > Yeison Mosquera <br/>
-During the sixth week of the semester, I feel worried and stressed because all my professors program exams. This means that I must study a lot and prepare to demonstrate my learning progress. When I feel exhausted or full of work, I like going to the botanical garden. It is a very relaxing place. I like watching the birds and listening to nature sounds. It’s very comforting. </Tooltip>
+            <AreasContainer className="zoom-mini">
+                <IRow>
+                    <ICol w={20}>
+                        <Area className="persona1" title='Yeison Mosquera ' onClick={() => closeOthers(1)} data-target="area_1" id="area_1" ref={area_1} />
+                        <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip1}  onClick={() => settooltip1(!tooltip1)} > 
+                            <h3>Yeison Mosquera</h3>
+                            <p> During the sixth week of the semester, I feel worried and stressed because all my professors program exams. 
+                                This means that I must study a lot and prepare to demonstrate my learning progress. When I feel exhausted or full of work, 
+                                I like going to the botanical garden. It is a very relaxing place. I like watching the birds and listening to nature sounds. 
+                                It’s very comforting. </p>
+                        </Tooltip>
+                    </ICol>
+                    <ICol w={20}>
+                        <Area className="persona2" title='Stella Burbano' onClick={() => closeOthers(2)} data-target="area_2" id="area_2" ref={area_2} />
+                        <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip2}  onClick={() => settooltip2(!tooltip2)} >
+                            <h3>Stella Burbano</h3>
+                            <p> As an engineering student, I do a lot of laboratory work. I complete forms and reports all the time. 
+                                These activities make me feel stressed and tired so I normally need something to stop feeling like this. 
+                                The Newspapers and Periodicals Library is an amazing place to go to when you feel tired. I like reading books and magazines there. 
+                                There are different editions and topics to explore. I also like feeling the wind that comes through the windows. This place is very refreshing. </p>
+                        </Tooltip>
+                    </ICol>
+
+                    <ICol w={20}>
+                        <Area className="persona3" title='Norberto Hincapié' onClick={() => closeOthers(3)} data-target="area_3" id="area_3" ref={area_3} />
+                        <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip3}  onClick={() => settooltip3(!tooltip3)} > 
+                            <h3>Norberto Hincapié</h3>
+                            <p> Learning a foreign language and how to teach is a very difficult process. Every week I compose long texts in English for my courses in Bachelor’s degree in Bilingualism. 
+                                This is really stressful. The only way I can increase my energy levels and prevent health problems is when I go the gym. 
+                                I like training there because the instructors are nice and helpful. Also, I like exercising while listening to some good music. 
+                                It is a fantastic place to relax. </p>
+                        </Tooltip>
+                    </ICol>
+
+                    <ICol w={20}>
+                        <Area className="persona4" title='Eliana Salazar' onClick={() => closeOthers(4)} data-target="area_4" id="area_4" ref={area_4} />
+                        <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip4}  onClick={() => settooltip4(!tooltip4)} > 
+                            <h3>Eliana Salazar</h3>
+                            <p> I spend a lot of time practicing for my music courses. Professors are rigorous and very demanding. 
+                                I usually practice cello four to five hours a day. At the end of the day, I usually feel tired and need something to get my energy back. 
+                                Fortunately, there is a place to relax where there are lots of palms. I like going there to chat with my friends and get distracted from all my responsibilities. 
+                                I like hanging out in places like this. </p>
+                        </Tooltip>
+                    </ICol>
+                    <ICol w={20}>
+                        <Area className="persona5" title='Diana Zuluaga' onClick={() => closeOthers(5)} data-target="area_5" id="area_5" ref={area_5} />
+                        <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip5}  onClick={() => settooltip5(!tooltip5)} >
+                            <h3>Diana Zuluaga</h3>
+                            <p> Right now, I’m doing my teaching practicum at a public school and, to be honest, it is a very hard job because this means I study and I work during the week. 
+                                The kids at the school are not easy to control and this causes me to have headaches and sometimes frustration. I like playing sports to compensate for all of that. 
+                                I like playing rugby, especially with the university’s team. I love the training sessions and the matches. They’re pretty exciting and relaxing. </p>
+                        </Tooltip>
+                    </ICol>
+                </IRow>
 
 
 
-                <Area  title='Stella Burbano' onClick={() => closeOthers(2)} data-target="area_2" id="area_2" ref={area_2} />
-                <Tooltip visible={tooltip2}  onClick={() => settooltip2(!tooltip2)} >Stella Burbano <br/>
-As an engineering student, I do a lot of laboratory work. I complete forms and reports all the time. These activities make me feel stressed and tired so I normally need something to stop feeling like this. 
-The Newspapers and Periodicals Library is an amazing place to go to when you feel tired. I like reading books and magazines there. There are different editions and topics to explore. I also like feeling the wind that comes through the windows. This place is very refreshing.</Tooltip>
-                
 
-
-
-                <Area  title='Norberto Hincapié' onClick={() => closeOthers(3)} data-target="area_3" id="area_3" ref={area_3} />
-                <Tooltip visible={tooltip3}  onClick={() => settooltip3(!tooltip3)} > Norberto Hincapié <br/>
-Learning a foreign language and how to teach is a very difficult process. Every week I compose long texts in English for my courses in Bachelor’s degree in Bilingualism. This is really stressful. The only way I can increase my energy levels and prevent health problems is when I go the gym. I like training there because the instructors are nice and helpful. Also, I like exercising while listening to some good music. It is a fantastic place to relax. </Tooltip>
-                
-
-
-
-                <Area  title='Eliana Salazar' onClick={() => closeOthers(4)} data-target="area_4" id="area_4" ref={area_4} />
-                <Tooltip visible={tooltip4}  onClick={() => settooltip4(!tooltip4)} > Eliana Salazar <br/>
-I spend a lot of time practicing for my music courses. Professors are rigorous and very demanding. I usually practice cello four to five hours a day. At the end of the day, I usually feel tired and need something to get my energy back. Fortunately, there is a place to relax where there are lots of palms. I like going there to chat with my friends and get distracted from all my responsibilities. I like hanging out in places like this.  </Tooltip>
-                
-
-
-
-                <Area  title='Diana Zuluaga' onClick={() => closeOthers(5)} data-target="area_5" id="area_5" ref={area_5} />
-                <Tooltip visible={tooltip5}  onClick={() => settooltip5(!tooltip5)} >Diana Zuluaga <br/>
-Right now, I’m doing my teaching practicum at a public school and, to be honest, it is a very hard job because this means I study and I work during the week. The kids at the school are not easy to control and this causes me to have headaches and sometimes frustration. I like playing sports to compensate for all of that. I like playing rugby, especially with the university’s team. I love the training sessions and the matches. They’re pretty exciting and relaxing. </Tooltip>
             
 
             </AreasContainer>
@@ -146,8 +166,8 @@ Right now, I’m doing my teaching practicum at a public school and, to be hones
 
             </DraggablesContainer>
 
-            <IRow pt={7.3} >
-                <ICol pt={1}><ButtonCheck onClick={comprobarPrueba} /></ICol>
+            <IRow className='pestanaBottom' >
+                <ICol ><ButtonCheck onClick={comprobarPrueba} /></ICol>
             </IRow>
             <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad1'} finished={ok} />
         </Container>

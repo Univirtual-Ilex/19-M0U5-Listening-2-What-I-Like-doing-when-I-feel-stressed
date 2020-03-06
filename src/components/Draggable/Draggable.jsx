@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import styles from './Draggable_styles'
-import BocinaButton from '../BocinaButton'
 import { gsap, TweenMax } from 'gsap'
 import { Draggable} from 'gsap/Draggable'
 
@@ -42,7 +41,7 @@ const Draggable_base = React.forwardRef(({visible, areaDrag, text, target, eleme
                     }else{
                         checkFunction(elementId, item)
                     }
-                    if(count == 5){
+                    if(count === 5){
                         TweenMax.to(this.target, 0.2, {x:0, y:0})
                         return false
                     }
@@ -55,12 +54,10 @@ const Draggable_base = React.forwardRef(({visible, areaDrag, text, target, eleme
     return (
         <div {...props} ref={itemDraggable}>
             <div className='draggable' >
-            
                 <span>{ text }</span>
             </div>
-
         </div>
-        
+
     )
 })
 

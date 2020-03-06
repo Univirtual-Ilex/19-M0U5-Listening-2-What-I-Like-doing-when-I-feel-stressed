@@ -8,7 +8,7 @@ import styles from './AreaDrop_styles'
 const AreaDrop_base = React.forwardRef(({title, ...props}, ref) => {
     return (
         <div {...props} ref={ref}>
-            <h3>{title}</h3>
+            {props.children}
         </div>
     )
 })

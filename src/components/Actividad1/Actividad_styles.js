@@ -8,6 +8,10 @@ const mistyles = css`
 .hide{
     display: none;
 }
+.pestanaBottom{
+    position:absolute;
+    bottom:-1em;
+}
 `
 
 export const DraggablesContainer = styled.div`
@@ -18,10 +22,21 @@ export const DraggablesContainer = styled.div`
 `
 
 export const AreasContainer = styled(DraggablesContainer)`
-
+    z-index:900;
     display:flex;
     justify-content:center;
     align-items: center ;
+    position: relative;
+    &.zoom-mini{
+
+        .Tooltip{
+
+            h3{
+                padding-bottom: 1em;
+                font-size:1.5em;
+            }
+        }
+    }
 `
 
 export const ProgressbarContainer = styled.div`
