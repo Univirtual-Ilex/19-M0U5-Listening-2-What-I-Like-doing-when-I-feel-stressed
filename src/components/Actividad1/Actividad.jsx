@@ -83,7 +83,7 @@ const Actividad_base = ({staticContext, ...props}) => {
     }
  
     return (
-        <Container bgImage='./src/bg_actividad1.png' {...props} id="area" h={35}>
+        <Container bgImage='./src/bg_actividad1.png' {...props} id="area" h={40}>
             
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='click on the buttons to listen and read the activities, associate them with the texts below.' />
@@ -162,11 +162,11 @@ const Actividad_base = ({staticContext, ...props}) => {
 
             </AreasContainer>
             
-            <DraggablesContainer>
+            <DraggablesContainer className="dcontainer">
                 
                 { dataItems.map((dato, i) => {
                     return(
-                        <DraggableItem text={dato.text}  key={i} elementId={i} checkFunction={remove_item} className={'dragItem ' + eval('visible' + i) } areaDrag="#area" target={dato.areaTarget} ref={[area_1, area_2, area_3, area_4, area_5]}/>
+                        <DraggableItem text={dato.text}  key={i} elementId={i} checkFunction={remove_item} className={'dragItem ' + eval('visible' + i) + ' ' +dato.activity } areaDrag="#area" target={dato.areaTarget} ref={[area_1, area_2, area_3, area_4, area_5]}/>
                     )
                 }) }
 

@@ -18,13 +18,20 @@ const mistyles = css`
 
 export const DraggablesContainer = styled.div`
     width: 90%;
-    margin: auto;
-    padding: 0.4em 1em;
+    margin: 0 60px;
+    padding: 0.4em 1em 0.4em 1em;
     text-align:center;
+    &.dcontainer{
+        position: relative;
+        z-index:2000;
+        top:-2em;
+        transform:translateX(1em);
+    }
 `
 
 export const AreasContainer = styled(DraggablesContainer)`
     z-index:900;
+    margin:0 auto;
     display:flex;
     justify-content:center;
     align-items: center ;
