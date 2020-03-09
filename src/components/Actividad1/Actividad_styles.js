@@ -11,7 +11,9 @@ const mistyles = css`
 .pestanaBottom{
     position:absolute;
     bottom:-1em;
+
 }
+
 `
 
 export const DraggablesContainer = styled.div`
