@@ -99,7 +99,7 @@ const Actividad_base = ({staticContext, ...props}) => {
                 <IRow>
                     <ICol w={20}>
                         <Area className="persona1" title='Yeison Mosquera '  data-target="area_1" id="area_1" ref={area_1} />
-                        <AreaButtons audio="media/audio.mp3" tooltip={ () => closeOthers(1) } />
+                        <AreaButtons audio="media/yeison-mosquera.mp3" tooltip={ () => closeOthers(1) } />
                         <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip1}  onClick={() => settooltip1(!tooltip1)} > 
                             <h3>Yeison Mosquera</h3>
                             <p> During the sixth week of the semester, I feel worried and stressed because all my professors program exams. 
@@ -110,7 +110,7 @@ const Actividad_base = ({staticContext, ...props}) => {
                     </ICol>
                     <ICol w={20}>
                         <Area className="persona2" title='Stella Burbano' data-target="area_2" id="area_2" ref={area_2} />
-                        <AreaButtons audio="media/audio.mp3" tooltip={ () => closeOthers(2) } />
+                        <AreaButtons audio="media/stella-burbano.mp3" tooltip={ () => closeOthers(2) } />
                         <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip2}  onClick={() => settooltip2(!tooltip2)} >
                             <h3>Stella Burbano</h3>
                             <p> As an engineering student, I do a lot of laboratory work. I complete forms and reports all the time. 
@@ -122,7 +122,7 @@ const Actividad_base = ({staticContext, ...props}) => {
 
                     <ICol w={20}>
                         <Area className="persona3" title='Norberto Hincapié' data-target="area_3" id="area_3" ref={area_3} />
-                        <AreaButtons audio="media/audio.mp3" tooltip={ () => closeOthers(3) } />
+                        <AreaButtons audio="media/norberto-hincapie.mp3" tooltip={ () => closeOthers(3) } />
                         <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip3}  onClick={() => settooltip3(!tooltip3)} > 
                             <h3>Norberto Hincapié</h3>
                             <p> Learning a foreign language and how to teach is a very difficult process. Every week I compose long texts in English for my courses in Bachelor’s degree in Bilingualism. 
@@ -134,7 +134,7 @@ const Actividad_base = ({staticContext, ...props}) => {
 
                     <ICol w={20}>
                         <Area className="persona4" title='Eliana Salazar' data-target="area_4" id="area_4" ref={area_4} />
-                        <AreaButtons audio="media/audio.mp3" tooltip={ () => closeOthers(4) } />
+                        <AreaButtons audio="media/eliana-salazar.mp3" tooltip={ () => closeOthers(4) } />
                         <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip4}  onClick={() => settooltip4(!tooltip4)} > 
                             <h3>Eliana Salazar</h3>
                             <p> I spend a lot of time practicing for my music courses. Professors are rigorous and very demanding. 
@@ -145,7 +145,7 @@ const Actividad_base = ({staticContext, ...props}) => {
                     </ICol>
                     <ICol w={20}>
                         <Area className="persona5" title='Diana Zuluaga' data-target="area_5" id="area_5" ref={area_5} />
-                        <AreaButtons audio="media/audio.mp3" tooltip={ () => closeOthers(5) } />
+                        <AreaButtons audio="media/diana-zuluaga.mp3" tooltip={ () => closeOthers(5) } />
                         <Tooltip pos="4em, 0" className="Tooltip" visible={tooltip5}  onClick={() => settooltip5(!tooltip5)} >
                             <h3>Diana Zuluaga</h3>
                             <p> Right now, I’m doing my teaching practicum at a public school and, to be honest, it is a very hard job because this means I study and I work during the week. 
