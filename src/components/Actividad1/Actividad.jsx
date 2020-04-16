@@ -87,7 +87,7 @@ const Actividad_base = ({staticContext, ...props}) => {
             
             <UiButtonsContainer>
                 <ButtonUi icon='ilx-ayuda' tooltip='click on the buttons to listen and read the activities, associate them with the texts below.' />
-                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.href = '/actividad1'} } />
+                <ButtonUi icon='ilx-volver' tooltip='Start Again' onClick={ () => {window.location.reload()} } />
             </UiButtonsContainer>
             <ICol mt={3}>
                 <MainTitle color={Ilex.violeta2}>
@@ -175,7 +175,7 @@ const Actividad_base = ({staticContext, ...props}) => {
             <IRow className='pestanaBottom' >
                 <ICol ><ButtonCheck onClick={comprobarPrueba} /></ICol>
             </IRow>
-            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'/actividad1'} finished={ok} />
+            <Modal visible={modalFlag} ok={ok} err={err} w={25} repeatUrl={'#/actividad1'} finished={ok} />
         </Container>
     )
 
